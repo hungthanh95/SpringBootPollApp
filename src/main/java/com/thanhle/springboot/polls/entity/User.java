@@ -1,5 +1,6 @@
 package com.thanhle.springboot.polls.entity;
 
+import com.thanhle.springboot.polls.entity.audit.DateAudit;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
@@ -13,7 +14,7 @@ import java.util.Set;
 @Table(name = "users", uniqueConstraints = {
         @UniqueConstraint(columnNames = {
                 "username"
-        });
+        }),
         @UniqueConstraint(columnNames = {
                 "email"
         })
